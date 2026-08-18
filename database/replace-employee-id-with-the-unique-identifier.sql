@@ -1,3 +1,4 @@
-SELECT name, EmployeeUNI.unique_id FROM Employees
-FULL OUTER JOIN EmployeeUNI 
-ON EmployeeUNI.id = Employees.id
+SELECT EmployeeUNI.unique_id, Employees.name
+FROM Employees
+LEFT JOIN EmployeeUNI
+    ON Employees.id = EmployeeUNI.id;
