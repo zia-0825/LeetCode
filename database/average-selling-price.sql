@@ -1,9 +1,10 @@
 SELECT 
     Prices.product_id,
     ROUND(
+        COALESCE(
         SUM(UnitsSold.units * Prices.price)::numeric
         / SUM(UnitsSold.units),
-        2
+         0) 2
     ) AS average_price
 FROM Prices
 LEFT JOIN UnitsSold
