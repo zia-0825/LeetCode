@@ -4,7 +4,7 @@ SELECT
         COALESCE(
         SUM(UnitsSold.units * Prices.price)::numeric
         / SUM(UnitsSold.units),
-         0) 2
+         0), 2
     ) AS average_price
 FROM Prices
 LEFT JOIN UnitsSold
