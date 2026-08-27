@@ -1,6 +1,6 @@
 SELECT 
     ROUND(
-        COUNT(DISTINCT a.player_id)::decimal
+        COUNT(DISTINCT a.player_id) *1.00
         / (SELECT COUNT(DISTINCT player_id) FROM Activity),
         2
     ) AS fraction
