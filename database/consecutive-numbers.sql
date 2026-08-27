@@ -1,4 +1,4 @@
-SELECT id AS ConsecutiveNums
+SELECT num AS ConsecutiveNums
 FROM (
     SELECT
         id,
